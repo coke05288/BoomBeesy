@@ -1,4 +1,4 @@
-import { apiClient } from '../api'
+import { apiClient, sendChatMessage } from '../api'
 import type {
   ChatRequest,
   ChatResponse,
@@ -18,17 +18,18 @@ export class ChatService {
 
   async sendMessage(request: ChatRequest): Promise<ChatResponse | null> {
     try {
-      const response = await apiClient.post<ChatResponse>('/api/chat/message', {
-        message: request.message,
-        chatId: request.chatId,
-        conversationHistory: request.conversationHistory || []
-      })
+      // 한국어 AI 모델 사용
+      const aiResponse = await sendChatMessage(
+        request.message,
+        '너는 친절한 한국어 도우미야.'
+      )
 
-      if (response.success) {
-        return response.data
-      } else {
-        console.error('Chat request failed:', response.error)
-        return null
+      // ChatResponse 형식으로 변환
+      return {
+        id: Date.now().toString(),
+        content: aiResponse,
+        timestamp: new Date(),
+        role: 'assistant'
       }
     } catch (error) {
       console.error('Error sending chat message:', error)

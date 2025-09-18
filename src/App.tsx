@@ -6,6 +6,7 @@ import UserGroup from './components/UserGroup'
 import MainPage from './pages/MainPage'
 import ChatPage from './pages/ChatPage'
 import ErrorBoundary from './components/ErrorBoundary'
+import { AuthProvider } from './contexts/AuthContext'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -72,30 +73,32 @@ function App() {
   }
 
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-primary-50 flex flex-col md:flex-row">
-        {/* Header - 모바일에서는 상단, 데스크톱에서는 사이드 */}
-        <Header activeTab={activeTab} onTabChange={handleTabChange} />
+    <AuthProvider>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-primary-50 flex flex-col md:flex-row">
+          {/* Header - 모바일에서는 상단, 데스크톱에서는 사이드 */}
+          <Header activeTab={activeTab} onTabChange={handleTabChange} />
 
-        {/* 데스크톱에서만 보이는 UserGroup */}
-        <div className="hidden md:block">
-          <UserGroup showAuthButtons={true} />
-        </div>
+          {/* 데스크톱에서만 보이는 UserGroup */}
+          <div className="hidden md:block">
+            <UserGroup showAuthButtons={true} />
+          </div>
 
-        {/* 메인 콘텐츠 영역 */}
-        <div className="flex-1 ml-0 mt-16 md:ml-20 md:mt-0">
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<MainPage />} />
-              <Route path="/planner" element={<MainPage />} />
-              <Route path="/archive" element={<MainPage />} />
-              <Route path="/chat/:chatId?" element={<ChatPage />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </AnimatePresence>
+          {/* 메인 콘텐츠 영역 */}
+          <div className="flex-1 ml-0 mt-16 md:ml-20 md:mt-0">
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/planner" element={<MainPage />} />
+                <Route path="/archive" element={<MainPage />} />
+                <Route path="/chat/:chatId?" element={<ChatPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </AnimatePresence>
+          </div>
         </div>
-      </div>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </AuthProvider>
   )
 }
 

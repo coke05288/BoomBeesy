@@ -20,9 +20,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       <div className={styles.messageWrapper}>
         {!message.isUser && (
           <div className={styles.botHeader}>
-            <div className={styles.botAvatar}>
+            {/* <div className={styles.botAvatar}>
               <BoomBusyCharacter size="sm" animate={false} />
-            </div>
+            </div> */}
             <span className={styles.botName}>
               붐비지
             </span>

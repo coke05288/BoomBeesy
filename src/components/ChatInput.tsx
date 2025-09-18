@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Plus, ArrowUp, Globe, User } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
+import { LoginModal } from './LoginModal'
 import styles from '../styles/components/ChatInput.module.css'
 
 interface ChatInputProps {
@@ -20,8 +22,10 @@ const ChatInput: React.FC<ChatInputProps> = ({
   disableRouting = false
 }) => {
   const [inputValue, setInputValue] = useState('')
+  const [showLoginModal, setShowLoginModal] = useState(false)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const navigate = useNavigate()
+  const { isLoggedIn, login } = useAuth()
 
   useEffect(() => {
     if (autoFocus && textareaRef.current) {
@@ -48,11 +52,15 @@ const ChatInput: React.FC<ChatInputProps> = ({
     }
   }
 
-  const handleSubmit = (e?: React.FormEvent) => {
-    if (e) {
-      e.preventDefault()
+  const handleLogin = (success: boolean) => {
+    if (success) {
+      login('tourapi')
+      // 로그인 성공 후 원래 하려던 작업 수행
+      proceedWithSubmit()
     }
+  }
 
+  const proceedWithSubmit = () => {
     if (inputValue.trim()) {
       console.log('Message:', inputValue.trim())
 
@@ -74,6 +82,20 @@ const ChatInput: React.FC<ChatInputProps> = ({
 
       setInputValue('')
     }
+  }
+
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) {
+      e.preventDefault()
+    }
+
+    // 로그인 체크
+    if (!isLoggedIn) {
+      setShowLoginModal(true)
+      return
+    }
+
+    proceedWithSubmit()
   }
 
   return (
@@ -114,6 +136,12 @@ const ChatInput: React.FC<ChatInputProps> = ({
           </div>
         </div>
       </form>
+
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onLogin={handleLogin}
+      />
     </div>
   )
 }

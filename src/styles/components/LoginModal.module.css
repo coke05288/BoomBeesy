@@ -1,0 +1,79 @@
+/* 모달 배경 */
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+}
+
+/* 모달 컨테이너 */
+.modal {
+  @apply bg-white rounded-2xl p-6 w-full max-w-md shadow-2xl;
+}
+
+/* 헤더 */
+.header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.title {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.closeButton {
+  @apply p-1 rounded-full hover:bg-gray-100;
+}
+
+.closeIcon {
+  @apply w-5 h-5 text-gray-500;
+}
+
+/* 폼 */
+.form {
+  @apply space-y-4;
+}
+
+/* 입력 필드 */
+.inputGroup {
+  @apply block;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.inputWrapper {
+  @apply relative;
+}
+
+.inputIcon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+}
+
+.input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none;
+}
+
+/* 에러 메시지 */
+.error {
+  @apply text-red-500 text-sm text-center;
+}
+
+/* 로그인 버튼 */
+.loginButton {
+  @apply w-full py-3 rounded-lg font-medium transition-colors text-white;
+}
+
+.loginButtonEnabled {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.loginButtonDisabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+/* 더미 계정 안내 */
+.testAccountInfo {
+  @apply mt-4 p-3 bg-gray-50 rounded-lg;
+}
+
+.testAccountText {
+  @apply text-xs text-gray-600 text-center;
+}
