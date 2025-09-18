@@ -41,7 +41,7 @@ export const createApiClient = () => {
         console.error('API request failed:', error)
         return {
           success: false,
-          data: null,
+          data: null as T,
           error: error instanceof Error ? error.message : 'Unknown error',
         }
       }
