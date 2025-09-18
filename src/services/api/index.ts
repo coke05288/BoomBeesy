@@ -103,11 +103,11 @@ export const createApiClient = () => {
 
 export const apiClient = createApiClient()
 
-// 채팅 완료 API 호출
+// 채팅 완료 API 호출 (Vercel 프록시 사용)
 export const chatCompletions = async (
   request: ChatCompletionRequest
 ): Promise<ChatCompletionResponse> => {
-  const response = await fetch(`${API_BASE_URL}/v1/chat/completions`, {
+  const response = await fetch('/api/chat-proxy', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
