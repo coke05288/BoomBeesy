@@ -1,0 +1,73 @@
+.container {
+  @apply h-full flex flex-col bg-gray-50;
+}
+
+.header {
+  @apply bg-white border-b border-primary-200 px-5 py-5;
+}
+
+.headerContent {
+  @apply flex items-center justify-between;
+}
+
+.title {
+  @apply flex items-center gap-3 text-2xl font-bold text-gray-800;
+}
+
+.addButton {
+  @apply flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg
+         hover:bg-violet-700 transition-colors duration-200;
+}
+
+.content {
+  @apply flex-1 p-6 overflow-y-auto;
+}
+
+.section {
+  @apply mb-8;
+}
+
+.sectionTitle {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+.planList {
+  @apply space-y-4;
+}
+
+.planCard {
+  @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100
+         hover:shadow-md transition-all duration-200 cursor-pointer;
+}
+
+.planHeader {
+  @apply flex items-center justify-between mb-4;
+}
+
+.planTitle {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+.planStatus {
+  @apply px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-medium;
+}
+
+.planInfo {
+  @apply space-y-2;
+}
+
+.planDetail {
+  @apply flex items-center gap-2 text-gray-600;
+}
+
+.emptyState {
+  @apply flex flex-col items-center justify-center py-16 text-center;
+}
+
+.emptyTitle {
+  @apply text-xl font-semibold text-gray-600 mt-4 mb-2;
+}
+
+.emptyDescription {
+  @apply text-gray-500 max-w-md;
+}

@@ -1,0 +1,22 @@
+.container {
+  @apply flex flex-col items-center justify-center py-4 px-4 text-center
+         w-[80%] mx-auto w-full;
+}
+
+.logoContainer {
+  @apply mb-4;
+}
+
+.logo {
+  @apply bg-gradient-to-br from-red-400 to-orange-400 text-white
+         w-12 h-12 rounded-xl flex items-center justify-center
+         text-lg font-bold mx-auto;
+}
+
+.title {
+  @apply text-3xl font-bold text-violet-600 mt-4 mb-2 tracking-tight;
+}
+
+.subtitle {
+  @apply text-base text-primary-600 m-0 font-medium;
+}

@@ -1,0 +1,15 @@
+.container {
+  @apply h-full w-full;
+}
+
+.characterSection {
+  @apply flex-1 flex items-center justify-center;
+}
+
+.characterWrapper {
+  @apply max-w-6xl mx-auto px-4 sm:px-5 py-4 sm:py-6;
+}
+
+.chatListSection {
+  @apply max-w-6xl mx-auto px-4 sm:px-5 py-4 sm:py-6 pb-8;
+}

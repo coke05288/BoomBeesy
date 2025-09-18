@@ -1,0 +1,69 @@
+.container {
+  @apply h-full flex flex-col;
+}
+
+.header {
+  @apply mb-4;
+}
+
+.title {
+  @apply text-lg font-semibold text-primary-600 mb-2;
+}
+
+.chatList {
+  @apply flex flex-col space-y-2;
+}
+
+.chatItem {
+  @apply flex items-center gap-3 p-3 rounded-lg bg-primary-100 hover:bg-violet-200
+         transition-colors cursor-pointer border border-transparent;
+}
+
+.chatItemActive {
+  @apply bg-primary-600 border-primary-500;
+}
+
+.chatIcon {
+  @apply w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center
+         text-primary-400 flex-shrink-0;
+}
+
+.chatItemActive .chatIcon {
+  @apply bg-primary-500 text-primary-500;
+}
+
+.chatContent {
+  @apply flex-1 min-w-0;
+}
+
+.chatTitle {
+  @apply text-primary-600 font-medium text-sm truncate mb-1;
+}
+
+.lastMessage {
+  @apply text-primary-400 text-xs truncate;
+}
+
+.chatActions {
+  @apply flex flex-col items-end gap-1 flex-shrink-0;
+}
+
+.timestamp {
+  @apply text-primary-400 text-xs;
+}
+
+.moreButton {
+  @apply text-primary-400 hover:text-white transition-colors p-1;
+}
+
+.emptyState {
+  @apply flex flex-col items-center justify-center py-12 text-center;
+}
+
+.emptyText {
+  @apply text-primary-200 font-medium;
+}
+
+.emptySubtext {
+  @apply text-primary-400 text-sm;
+}

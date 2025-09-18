@@ -1,0 +1,113 @@
+.container {
+  @apply h-full flex flex-col bg-gray-50;
+}
+
+.header {
+  @apply bg-white border-b border-primary-200 px-5 py-5;
+}
+
+.headerContent {
+  @apply flex items-center justify-between mb-4;
+}
+
+.title {
+  @apply flex items-center gap-3 text-2xl font-bold text-gray-800;
+}
+
+.controls {
+  @apply space-y-4;
+}
+
+.searchBox {
+  @apply flex items-center gap-3 bg-gray-100 rounded-lg px-4 py-3;
+}
+
+.searchInput {
+  @apply flex-1 bg-transparent border-none outline-none text-gray-700
+         placeholder-gray-500;
+}
+
+.filterTabs {
+  @apply flex gap-2;
+}
+
+.filterTab {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200;
+}
+
+.filterTab:not(.filterTabActive) {
+  @apply text-gray-600 bg-gray-100 hover:bg-gray-200;
+}
+
+.filterTabActive {
+  @apply text-violet-600 bg-violet-100;
+}
+
+.content {
+  @apply flex-1 p-6 overflow-y-auto;
+}
+
+.itemGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.itemCard {
+  @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100
+         hover:shadow-md transition-all duration-200 cursor-pointer;
+}
+
+.itemHeader {
+  @apply flex items-center justify-between mb-4;
+}
+
+.itemType {
+  @apply flex items-center justify-center w-8 h-8 rounded-lg;
+}
+
+.itemMenu {
+  @apply p-1 rounded-lg hover:bg-gray-100 transition-colors duration-200;
+}
+
+.itemContent {
+  @apply space-y-3;
+}
+
+.itemTitle {
+  @apply text-lg font-semibold text-gray-800 line-clamp-2;
+}
+
+.itemDescription {
+  @apply text-gray-600 text-sm line-clamp-2;
+}
+
+.itemInfo {
+  @apply flex items-center justify-between text-xs text-gray-500;
+}
+
+.itemLocation {
+  @apply flex items-center gap-1;
+}
+
+.itemDate {
+  @apply opacity-75;
+}
+
+.itemTags {
+  @apply flex flex-wrap gap-2;
+}
+
+.itemTag {
+  @apply px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full;
+}
+
+.emptyState {
+  @apply flex flex-col items-center justify-center py-16 text-center;
+}
+
+.emptyTitle {
+  @apply text-xl font-semibold text-gray-600 mt-4 mb-2;
+}
+
+.emptyDescription {
+  @apply text-gray-500 max-w-md;
+}

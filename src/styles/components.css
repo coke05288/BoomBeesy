@@ -1,0 +1,52 @@
+/* 기본 컴포넌트 스타일 */
+
+@layer components {
+  /* 기본 레이아웃 */
+  .page-container {
+    @apply min-h-screen bg-primary-100;
+  }
+
+  .mobile-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-5 py-4 sm:py-6;
+  }
+
+  /* 헤더 컴포넌트 스타일*/
+  .header {
+    @apply bg-primary-50 border-b border-primary-200 sticky top-0 z-40
+  }
+
+  /* 스크롤바 숨기기 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 기본 버튼 스타일 */
+  .btn-primary {
+    @apply bg-yellow-400 hover:bg-yellow-500 text-primary-800 font-medium rounded-xl
+           transition-colors duration-200 px-4 py-2 text-sm;
+  }
+
+  /* 채팅 관련 스타일 */
+  .chat-bubble {
+    @apply rounded-2xl px-4 py-3 max-w-xs text-sm leading-relaxed;
+  }
+
+  .chat-bubble-user {
+    @apply bg-gradient-to-r from-violet-500 to-violet-600 text-white ml-auto;
+  }
+
+  .chat-bubble-ai {
+    @apply bg-primary-50 text-primary-800 border border-primary-200/50 mr-auto;
+  }
+
+  .chat-input {
+    @apply w-full px-4 py-2.5 border border-primary-200 rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent
+           bg-white text-primary-800 placeholder-primary-500 text-sm;
+  }
+}

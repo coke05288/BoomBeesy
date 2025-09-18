@@ -1,0 +1,19 @@
+.container {
+  @apply relative;
+}
+
+.sizeSm {
+  @apply w-16 h-12;
+}
+
+.sizeMd {
+  @apply w-32 h-24;
+}
+
+.sizeLg {
+  @apply w-48 h-36;
+}
+
+.svg {
+  @apply w-full h-full;
+}

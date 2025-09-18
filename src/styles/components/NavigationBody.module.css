@@ -1,0 +1,7 @@
+.container {
+  @apply bg-white rounded-full shadow-lg border border-primary-200/60 px-6 py-2 mx-auto w-fit;
+}
+
+.buttonGroup {
+  @apply flex justify-center items-center gap-16;
+}

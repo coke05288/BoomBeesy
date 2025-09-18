@@ -1,0 +1,31 @@
+/* CSS Variables for consistent theming */
+:root {
+  /* Background Colors */
+  --bg-primary: #fafaf9; /* stone-50 */
+  --bg-secondary: #f5f5f4; /* stone-100 */
+  --bg-tertiary: #e7e5e4; /* stone-200 */
+
+  /* Text Colors */
+  --text-primary: #292524; /* stone-800 */
+  --text-secondary: #57534e; /* stone-600 */
+  --text-muted: #78716c; /* stone-500 */
+
+  /* Accent Colors */
+  --accent-yellow: #facc15; /* yellow-600 */
+  --accent-yellow-hover: #d97d06; /* yellow-700 */
+  --accent-yellow-light: #fef3c7; /* yellow-200 */
+
+  /* Sub Accent Colors */
+  --accent-purple: #8f5de4; /* purple-600 */
+  --accent-purple-hover: #7c3aed; /* purple-700 */
+  --accent-purple-light: #d3c1f3; /* purple-200 */
+
+  /* Success Colors */
+  --success: #16a34a; /* green-600 */
+  --success-bg: #dcfce7; /* green-100 */
+
+  /* Neutral Colors */
+  --neutral-300: #d6d3d1; /* stone-300 */
+  --neutral-400: #a8a29e; /* stone-400 */
+  --neutral-800: #292524; /* stone-800 */
+}

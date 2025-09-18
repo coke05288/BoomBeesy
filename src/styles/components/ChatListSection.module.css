@@ -1,0 +1,11 @@
+.container {
+  @apply space-y-4;
+}
+
+.currentChatWrapper {
+  @apply mb-4;
+}
+
+.noSelection {
+  @apply text-primary-500 text-sm;
+}

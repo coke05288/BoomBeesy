@@ -1,0 +1,23 @@
+.container {
+  @apply w-full
+         md:w-full
+         max-md:w-auto;
+}
+
+.buttonGroup {
+  @apply flex flex-col gap-2
+         md:flex-col md:gap-2
+         max-md:flex-row max-md:gap-1;
+}
+
+.navItem {
+  @apply flex flex-col items-center py-3 px-1 rounded-lg transition-all duration-200 cursor-pointer
+         md:flex-col md:items-center md:py-3 md:px-1
+         max-md:flex-col max-md:items-center max-md:py-1 max-md:px-2;
+}
+
+.navLabel {
+  @apply text-sm text-primary-500 mt-1 font-medium text-center
+         md:text-sm md:mt-1
+         max-md:text-xs max-md:mt-0.5;
+}

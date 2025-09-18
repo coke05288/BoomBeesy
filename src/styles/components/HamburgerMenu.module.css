@@ -1,0 +1,6 @@
+.button {
+  @apply fixed top-5 left-28 z-50 
+         flex items-center justify-center
+         transition-all duration-200
+         text-primary-400 hover:text-violet-600;
+}

@@ -1,0 +1,83 @@
+.container {
+  @apply h-full flex flex-col bg-primary-50;
+}
+
+.chatHeader {
+  @apply flex items-center justify-between px-6 py-4 bg-white border-b border-primary-200;
+}
+
+.headerLeft {
+  @apply flex items-center;
+}
+
+.menuButton {
+  @apply text-primary-600 hover:text-primary-800 transition-colors p-2;
+}
+
+.headerCenter {
+  @apply flex-1 text-center;
+}
+
+.title {
+  @apply text-lg font-semibold text-primary-800 mb-1;
+}
+
+.subtitle {
+  @apply text-sm text-primary-600;
+}
+
+.headerRight {
+  @apply flex items-center;
+}
+
+.backButton {
+  @apply text-primary-600 hover:text-primary-800 transition-colors p-2;
+}
+
+.messagesContainer {
+  @apply flex-1 overflow-y-auto px-6 py-4 bg-primary-50;
+}
+
+.messagesContent {
+  @apply max-w-4xl mx-auto;
+}
+
+.messageWrapper {
+  @apply mb-6;
+}
+
+.typingIndicator {
+  @apply flex justify-start mb-6;
+}
+
+.typingBubble {
+  @apply bg-white border border-primary-200 rounded-2xl px-4 py-3 shadow-sm;
+}
+
+.typingDots {
+  @apply flex space-x-1;
+}
+
+.typingDot {
+  @apply w-2 h-2 bg-primary-400 rounded-full animate-pulse;
+}
+
+.typingDot:nth-child(2) {
+  /* @apply animation-delay-100; */
+}
+
+.typingDot:nth-child(3) {
+  /* @apply animation-delay-200; */
+}
+
+.inputSection {
+  @apply px-6 py-4 bg-white border-t border-primary-200;
+}
+
+.chatInputWrapper {
+  @apply max-w-4xl mx-auto;
+}
+
+.disclaimer {
+  @apply text-center text-xs text-primary-500 mt-2;
+}

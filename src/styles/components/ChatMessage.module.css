@@ -1,0 +1,55 @@
+.container {
+  @apply mb-4;
+}
+
+.containerUser {
+  @apply flex justify-end;
+}
+
+.containerBot {
+  @apply flex justify-start;
+}
+
+.messageWrapper {
+  @apply max-w-xs;
+}
+
+.botHeader {
+  @apply flex items-center gap-2 mb-2;
+}
+
+.botAvatar {
+  @apply w-6 h-6;
+}
+
+.botName {
+  @apply text-xs bg-gradient-to-r from-violet-500 to-violet-600 bg-clip-text text-transparent font-bold;
+}
+
+.messageContent {
+  @apply rounded-2xl px-4 py-3 max-w-xs text-sm leading-relaxed;
+}
+
+.messageUser {
+  @apply bg-gradient-to-r from-violet-500 to-violet-600 text-white ml-auto;
+}
+
+.messageBot {
+  @apply bg-primary-50 text-primary-800 border border-primary-200/50 mr-auto;
+}
+
+.messageText {
+  @apply text-sm leading-relaxed whitespace-pre-wrap;
+}
+
+.timestamp {
+  @apply text-xs text-gray-500 mt-1 font-medium;
+}
+
+.timestampUser {
+  @apply text-right;
+}
+
+.timestampBot {
+  @apply text-left;
+}

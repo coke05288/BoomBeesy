@@ -1,0 +1,19 @@
+.container {
+  @apply relative;
+}
+
+.fadeLeft {
+  @apply absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-primary-100 to-transparent z-10 pointer-events-none;
+}
+
+.fadeRight {
+  @apply absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-primary-100 to-transparent z-10 pointer-events-none;
+}
+
+.scrollContainer {
+  @apply flex space-x-3 overflow-x-auto scrollbar-hide py-4;
+}
+
+.itemWrapper {
+  @apply flex-shrink-0;
+}

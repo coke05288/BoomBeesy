@@ -1,0 +1,7 @@
+.container {
+  @apply text-center;
+}
+
+.characterWrapper {
+  @apply flex justify-center;
+}

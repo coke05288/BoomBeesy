@@ -1,0 +1,24 @@
+.overlay {
+  @apply fixed inset-0 bg-primary-500 bg-opacity-50 z-30;
+}
+
+.sidebar {
+  @apply fixed top-0 left-20 h-full w-80 bg-primary-50 shadow-2xl z-40
+         flex flex-col;
+}
+
+.header {
+  @apply flex items-center justify-between p-4 border-b border-primary-200;
+}
+
+.title {
+  @apply text-lg font-semibold text-primary-800;
+}
+
+.closeButton {
+  @apply text-primary-600 hover:text-primary-800 transition-colors p-1;
+}
+
+.content {
+  @apply flex-1 p-4 overflow-y-auto;
+}
