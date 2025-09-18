@@ -25,7 +25,8 @@ export default async function handler(
   }
 
   try {
-    const apiUrl = 'https://203.230.60.194:8000/v1/chat/completions'
+    // HTTPS 대신 HTTP 사용 (Vercel 서버에서 허용)
+    const apiUrl = 'http://203.230.60.194:8000/v1/chat/completions'
 
     const proxyResponse = await fetch(apiUrl, {
       method: 'POST',
