@@ -5,7 +5,7 @@ export default async function handler(
   response: VercelResponse,
 ) {
   // CORS 헤더 설정
-  response.setHeader('Access-Control-Allow-Credentials', true)
+  response.setHeader('Access-Control-Allow-Credentials', 'true')
   response.setHeader('Access-Control-Allow-Origin', '*')
   response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
   response.setHeader(
