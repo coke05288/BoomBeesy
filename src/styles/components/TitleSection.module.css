@@ -20,3 +20,8 @@
 .subtitle {
   @apply text-base text-primary-600 m-0 font-medium;
 }
+
+/* 그라데이션 애니메이션 밑 상단에 마진 추가 */
+.description {
+  @apply text-base font-medium mt-6 bg-gradient-to-r from-violet-600 to-violet-700 bg-clip-text text-transparent animate-pulse;
+}

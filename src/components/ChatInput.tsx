@@ -16,7 +16,7 @@ interface ChatInputProps {
 
 const ChatInput: React.FC<ChatInputProps> = ({
   onCreateChat,
-  placeholder = "무엇이든 물어보세요",
+  placeholder = "당신의 도시 '대전' 에 관해서라면 무엇이든 물어보세요 :)",
   className = '',
   autoFocus = true,
   disableRouting = false
