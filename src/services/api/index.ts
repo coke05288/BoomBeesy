@@ -1,5 +1,5 @@
 // API 기본 설정
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
+export const API_BASE_URL = import.meta.env.API_BASE_URL || 'http://localhost:8000'
 
 // OpenAI 호환 채팅 타입 정의
 export interface ChatMessage {

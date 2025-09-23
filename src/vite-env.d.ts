@@ -2,7 +2,6 @@
 
 interface ImportMetaEnv {
   readonly VITE_API_BASE_URL: string
-  readonly VITE_AI_API_URL: string
   readonly VITE_APP_NAME: string
   readonly VITE_APP_VERSION: string
   readonly VITE_GOOGLE_MAPS_API_KEY: string
@@ -12,6 +11,7 @@ interface ImportMetaEnv {
   readonly VITE_ENABLE_ANALYTICS: string
   readonly VERCEL_URL: string
   readonly VERCEL_ENV: string
+  readonly AI_API_URL: string
 }
 
 interface ImportMeta {

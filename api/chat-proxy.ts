@@ -25,8 +25,12 @@ export default async function handler(
   }
 
   try {
-    // HTTPS 대신 HTTP 사용 (Vercel 서버에서 허용)
-    const apiUrl = 'http://203.230.60.194:8000/v1/chat/completions'
+    // 환경변수에서 API URL 가져오기
+    const apiUrl = process.env.AI_API_URL
+
+    if (!apiUrl) {
+      throw new Error('AI API URL is not configured')
+    }
 
     const proxyResponse = await fetch(apiUrl, {
       method: 'POST',
